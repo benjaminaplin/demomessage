@@ -5,6 +5,7 @@ var vmArray = [];
 
 var server = net.createServer(function(connection){
   connection.setEncoding("utf8");
+  connection.write("hey welcome to ben's message barrel! write" + "\r\n" + " 'add' 'yourname' then the positive message!")
   connection.on('data', function(vmInput){
     vmInput = vmInput.trim();
     vmInput = vmInput.split(" ");
